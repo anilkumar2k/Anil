@@ -1,0 +1,29 @@
+package testcase;
+
+import java.io.IOException;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import Pages.ActitimeLoginpage_Assignment_1;
+import Pages.HomePage_pom_actitime;
+import generic.BaseTest;
+
+@Listeners(generic.Screenshot1.class)
+public class TC1_Actitime_Screenshot extends BaseTest
+{
+	@Test
+	public void loginLogout() throws IOException, InterruptedException
+	{
+		ActitimeLoginpage_Assignment_1 login = new ActitimeLoginpage_Assignment_1(driver);
+		login.loginMethod();
+		login.titlevalidate();
+	}
+	@Test(priority = 1)
+	public void logout()
+	{
+    	HomePage_pom_actitime homepage = new HomePage_pom_actitime(driver);
+    	homepage.logoutMethod();
+		
+	}
+
+
+}

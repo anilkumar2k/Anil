@@ -1,0 +1,87 @@
+package actitime_pom;
+
+import java.time.Duration;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+public class Tasks_Page_pomActitime 
+{
+	 WebDriver driver;
+	@FindBy(xpath="//div[.='Add New']")
+	private WebElement addnewbutton;
+	@FindBy(xpath="//div[.='+ New Customer']")
+	private WebElement newcustomer;
+	
+	@FindBy(xpath = "(//input[contains(@placeholder,'typing')])[1]")
+	private WebElement searchbar;
+	
+	//@FindBy(xpath = "//span[.='anil']/../../..//div[@class='editButton']")
+	@FindBy(xpath = "(//div[@class='editButton'])[17]")
+	private WebElement customerSettingLink;
+	@FindBy(xpath = "(//div[.='ACTIONS'])[1]")
+	private WebElement actionLink;
+    @FindBy(xpath = "(//div[@class='deleteButton'])[1]")
+    private WebElement deleteLink;
+    @FindBy(xpath = "//span[.='Delete permanently']")
+    private WebElement deletePermanently;
+    
+    //@FindBy(xpath = "//span[.='anil']")
+    @FindBy(xpath="//span[.='anil']")
+    private WebElement newcustomerFile;
+    
+	@FindBy(xpath = "//div[.='+ New Project']")
+	private WebElement newProject_Button;
+
+	
+	public  Tasks_Page_pomActitime (WebDriver driver)
+	{
+		this.driver= driver;
+		PageFactory.initElements(driver, this);
+	}
+	public void newcustomerMethod()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.titleContains("actiTIME"));
+		addnewbutton.click();
+		newcustomer.click();
+	}
+	public void deleteCustomerMethod() throws InterruptedException
+	{
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		//wait.until(ExpectedConditions.titleContains("actiTIME"));
+		Thread.sleep(3000);
+		searchbar.sendKeys("anil");
+		Thread.sleep(6000);
+		
+		Actions actions= new Actions(driver);
+		actions.moveToElement(newcustomerFile).click().perform();
+		Thread.sleep(5000);
+		//actions.moveToElement(customerSettingLink).click().perform();
+		customerSettingLink.click();
+		Thread.sleep(4000);
+		actionLink.click();
+		Thread.sleep(4000);
+		deleteLink.click();
+		Thread.sleep(4000);
+		deletePermanently.click();
+	}
+	public void newProjectMethod()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.titleContains("actiTIME"));
+		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("argument[0].click();" , addnewbutton);
+		//addnewbutton.click();
+		newProject_Button.click();
+	}
+
+}

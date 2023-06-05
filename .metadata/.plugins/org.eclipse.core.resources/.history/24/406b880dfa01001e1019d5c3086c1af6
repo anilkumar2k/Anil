@@ -1,0 +1,24 @@
+package Test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import actitime_pom.ActitimeHomepage_Assignment_1;
+import actitime_pom.ActitimeLoginpage_Assignment_1;
+
+public class TC_2_Login_task_Logout {
+
+	public static void main(String[] args)
+	{
+		 System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+		  WebDriver driver= new ChromeDriver();
+		  driver.get("https://demo.actitime.com/login.do");
+		  driver.manage().window().maximize();
+		  ActitimeLoginpage_Assignment_1 login = new ActitimeLoginpage_Assignment_1(driver);
+		  login.loginMethod() ;
+		  
+		  ActitimeHomepage_Assignment_1  home = new  ActitimeHomepage_Assignment_1(driver);
+		  home.logoutMethod();
+	}
+
+}

@@ -1,0 +1,29 @@
+package Anjali.com.Scripts;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RemovePandEFromQspiders {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://en-gb.facebook.com");
+		WebElement username=driver.findElement(By.id("email"));
+		username.sendKeys("qspiders");
+		String value=username.getAttribute("value");
+		System.out.println(value);
+		for(int i=0;i<value.length();i++) {
+			char c=value.charAt(i);
+			if(c=='p'||c=='e') {
+				username.sendKeys(Keys.BACK_SPACE);
+				
+			
+			}
+		}
+	}
+
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[executionstart]]>
+    </line>
+    <line>
+      <![CDATA[both title are matching]]>
+    </line>
+    <line>
+      <![CDATA[execution complete]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-06-03T21:12:00 IST" name="Suite" finished-at="2023-06-03T21:12:34 IST" duration-ms="33573">
+    <groups>
+    </groups>
+    <test started-at="2023-06-03T21:12:00 IST" name="Test" finished-at="2023-06-03T21:12:34 IST" duration-ms="33573">
+      <class name="com.actitime.testcases.TC1_ActitimeLoginLogoute">
+        <test-method is-config="true" signature="executionStart()[pri:0, instance:com.actitime.testcases.TC1_ActitimeLoginLogoute@38c6f217]" started-at="2023-06-03T21:12:00 IST" name="executionStart" finished-at="2023-06-03T21:12:00 IST" duration-ms="31" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[executionstart]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- executionStart -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.actitime.testcases.TC1_ActitimeLoginLogoute@38c6f217]" started-at="2023-06-03T21:12:00 IST" name="setup" finished-at="2023-06-03T21:12:16 IST" duration-ms="15389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginLogout()[pri:0, instance:com.actitime.testcases.TC1_ActitimeLoginLogoute@38c6f217]" started-at="2023-06-03T21:12:16 IST" name="loginLogout" finished-at="2023-06-03T21:12:33 IST" duration-ms="17458" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[both title are matching]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginLogout -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.actitime.testcases.TC1_ActitimeLoginLogoute@38c6f217]" started-at="2023-06-03T21:12:33 IST" name="teardown" finished-at="2023-06-03T21:12:34 IST" duration-ms="632" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="executionComplete()[pri:0, instance:com.actitime.testcases.TC1_ActitimeLoginLogoute@38c6f217]" started-at="2023-06-03T21:12:34 IST" name="executionComplete" finished-at="2023-06-03T21:12:34 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[execution complete]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- executionComplete -->
+      </class> <!-- com.actitime.testcases.TC1_ActitimeLoginLogoute -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

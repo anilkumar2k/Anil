@@ -1,0 +1,10 @@
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.ITestResult;
+
+public class Screenshot1 
+{
+  public void onTestFailure(ITestResult result)
+  {
+	  
+ }
+}

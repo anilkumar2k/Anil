@@ -1,0 +1,35 @@
+package actitime_pom;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Tasks_Page_pomActitime 
+{
+	 WebDriver driver;
+	@FindBy(xpath="//div[.='Add New']")
+	private WebElement addnewbutton;
+	@FindBy(xpath="//div[.='+ New Customer']")
+	private WebElement newcustomer;
+	@FindBy(xpath = "(//div[@class='editButton'])[3]")
+	private WebElement customerSettingLink;
+	
+	public  Tasks_Page_pomActitime (WebDriver driver)
+	{
+		this.driver= driver;
+		PageFactory.initElements(driver, this);
+	}
+	public void newcustomerMethod()
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.titleContains("actiTIME"));
+		addnewbutton.click();
+		newcustomer.click();
+	}
+
+}

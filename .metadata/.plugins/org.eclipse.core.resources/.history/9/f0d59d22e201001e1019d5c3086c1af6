@@ -1,0 +1,56 @@
+package actitime_pom;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class HomePage_pom_actitime 
+{  
+	public  WebDriver driver;
+	@FindBy(xpath = "//a[.='Logout']")
+	private WebElement loutoutLink;
+	@FindBy(xpath = "//a[@class='content tasks']")
+	private WebElement Tasks;
+	@FindBy(xpath = "//a[@class='content users']")
+	private WebElement userlink;
+	@FindBy(xpath = "(//div[@class='popup_menu_icon'])[2]")
+	private WebElement settingsLink;
+
+	public HomePage_pom_actitime (WebDriver driver)
+	{
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	public void logoutMethod()
+	{
+		loutoutLink.click();
+	}
+	public void taskMethod()
+	{
+		WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[.='Me']")));
+		
+		 Tasks.click();
+	}	
+	public void userlinkMethod()
+	{
+		WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[.='Me']")));
+		
+		 userlink.click();
+	}	
+	public void settingsLinkMethod()
+	{
+		WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[.='Me']")));
+		
+		 settingsLink.click();
+	}	
+
+}

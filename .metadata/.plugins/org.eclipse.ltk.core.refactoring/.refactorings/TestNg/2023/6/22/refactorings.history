@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Actitime_CreateNewCustomerPlace.java&apos; to &apos;POM/src/actitime_pom&apos;&#x0D;&#x0A;- Original project: &apos;TestNg&apos;&#x0D;&#x0A;- Destination element: &apos;POM/src/actitime_pom&apos;&#x0D;&#x0A;- Original element: &apos;Pom_classes.Actitime_CreateNewCustomerPlace.java&apos;" description="Copy compilation unit" destination="=POM/src&lt;actitime_pom" element1="/src&lt;Pom_classes{Actitime_CreateNewCustomerPlace.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1685788688027" units="1" version="1.0"/>
+</session>
